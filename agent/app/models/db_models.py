@@ -4,7 +4,6 @@ import uuid
 import logging
 
 logger = logging.getLogger(__name__)
-
 Base = declarative_base()
 
 class Branch(Base):
@@ -42,6 +41,7 @@ class Product(Base):
     name = Column(String(255), nullable=False)
     description = Column(Text, nullable=True)
     created_at = Column(TIMESTAMP, server_default=func.now())
+    updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
 
 class ProductPermission(Base):

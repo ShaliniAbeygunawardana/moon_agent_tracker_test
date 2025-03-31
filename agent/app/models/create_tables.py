@@ -2,7 +2,7 @@
 import sys
 import os
 
-sys.path.append(r"C:/Users/Shalini Imantha/moon_agent_tracker/")
+sys.path.append("/home/kosala/git-repos/moon_agent_tracker_test/")
 
 
 from sqlalchemy import create_engine
